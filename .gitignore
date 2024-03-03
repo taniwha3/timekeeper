@@ -19,3 +19,6 @@
 
 # Go workspace file
 go.work
+
+# The projects file, this is custom for every user.
+projects.txt
