@@ -1,3 +1,6 @@
+# WARNING
+This project is under active development without a v1 release. Expect the data structures and storage to change.
+
 # TimeKeeper
 Welcome to TimeKeeper, a simple CLI application designed to help you manage and track your project activities with ease. TimeKeeper allows you to add projects to a list, select them through a menu, and log your activities with timestamps. It's a perfect tool for freelancers, developers, or anyone looking to keep a detailed record of their project engagements.
 
