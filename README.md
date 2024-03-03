@@ -17,13 +17,8 @@ Each activity log is stored in a structured format containing the projects list,
 
 ```json
 {
-  "Projects": [
-    "one",
-    "two",
-    "three"
-  ],
-  "Selected": "one",
-  "Time": "2024-03-03T12:06:52.946635857-08:00"
+  "selected": "one",
+  "timestamp": "2024-03-03T12:06:52.946635857-08:00"
 }
 ```
 

@@ -169,9 +169,8 @@ func (m model) View() string {
 }
 
 type Data struct {
-	Projects []string
-	Selected string
-	Time     time.Time
+	Selected string    `json:"selected"`
+	Time     time.Time `json:"timestamp"`
 }
 
 func write_event(projects []string, selectedMap map[int]struct{}, directory string) error {
@@ -180,11 +179,10 @@ func write_event(projects []string, selectedMap map[int]struct{}, directory stri
 		selected = projects[k]
 	}
 	data := &Data{
-		projects,
 		selected,
 		time.Now(),
 	}
-	file := fmt.Sprintf("test-%d.txt", time.Now().UnixMilli())
-	b, _ := json.MarshalIndent(data, "", "  ")
+	file := fmt.Sprintf("entry-%d.txt", time.Now().UnixMilli())
+	b, _ := json.Marshal(data)
 	return os.WriteFile(directory+file, b, 0440)
 }
